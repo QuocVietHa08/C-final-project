@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="db">
+  <DataContextMoniker Name="/dbDataContext" />
+  <nestedChildShapes>
+    <classShape Id="38f4a9a0-1bbb-41ff-95a2-38f86d52025a" absoluteBounds="4, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dbDataContext/DocGia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4022fb95-4a5d-407b-aa64-ca9d3297a994" absoluteBounds="4.015, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="edcc6d93-4316-4860-bfd8-ae79c1bede9f" absoluteBounds="4, 3.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/dbDataContext/DoiTuong" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ed2f7e62-87a1-4f99-927b-bc6c40c48b9d" absoluteBounds="4.015, 3.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5 : 3.125); (5 : 2.65549967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbDataContext/DoiTuong/DoiTuong_DocGia" />
+      <nodes>
+        <classShapeMoniker Id="edcc6d93-4316-4860-bfd8-ae79c1bede9f" />
+        <classShapeMoniker Id="38f4a9a0-1bbb-41ff-95a2-38f86d52025a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,10 @@
+C:\Ổ C\LT Windows\C-final-project\BaiTapLon\BaiTapLon\bin\Debug\BaiTapLon.exe.config
+C:\Ổ C\LT Windows\C-final-project\BaiTapLon\BaiTapLon\bin\Debug\BaiTapLon.exe
+C:\Ổ C\LT Windows\C-final-project\BaiTapLon\BaiTapLon\bin\Debug\BaiTapLon.pdb
+C:\Ổ C\LT Windows\C-final-project\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.csprojAssemblyReference.cache
+C:\Ổ C\LT Windows\C-final-project\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.Form1.resources
+C:\Ổ C\LT Windows\C-final-project\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.Properties.Resources.resources
+C:\Ổ C\LT Windows\C-final-project\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.csproj.GenerateResource.cache
+C:\Ổ C\LT Windows\C-final-project\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.csproj.CoreCompileInputs.cache
+C:\Ổ C\LT Windows\C-final-project\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.exe
+C:\Ổ C\LT Windows\C-final-project\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.pdb
