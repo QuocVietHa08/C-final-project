@@ -77,6 +77,7 @@ namespace BaiTapLon
             this.dsdocgia.Name = "dsdocgia";
             this.dsdocgia.Size = new System.Drawing.Size(759, 245);
             this.dsdocgia.TabIndex = 2;
+            this.dsdocgia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsdocgia_CellClick);
             // 
             // button1
             // 
@@ -216,6 +217,7 @@ namespace BaiTapLon
             this.button4.TabIndex = 18;
             this.button4.Text = "Xoa";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -225,6 +227,7 @@ namespace BaiTapLon
             this.button5.TabIndex = 19;
             this.button5.Text = "Tim";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 

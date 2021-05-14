@@ -20,7 +20,7 @@ create table DoiTuong(
   NgayHetHan nvarchar(10),
   foreign key (MaDoiTuong) references DoiTuong(MaDoiTuong)
   )
-
+	
  insert into DoiTuong values
  ('madt01','sinh vien'),
  ('madt02','nhan vien'),

@@ -64,6 +64,44 @@ namespace BaiTapLon
         private void button3_Click(object sender, EventArgs e)
         {
             dbDataContext db = new dbDataContext();
+            var update = db.DocGias.Single(dg => dg.MaDocGia == txtmadocgia.Text);
+            update.HoTen = txthoten.Text;
+            update.GioiTinh = cbogioitinh.Text;
+            update.NgaySinh = txtngaysinh.Text;
+            update.MaDoiTuong = cbomadoituong.SelectedValue.ToString();
+            update.NgayCap = txtngaycap.Text;
+            update.NgayHetHan = txtngayhethan.Text;
+
+            db.SubmitChanges();
+            Load_DocGia();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dbDataContext db = new dbDataContext();
+            var xoa = db.DocGias.Single(dg => dg.MaDocGia == txtmadocgia.Text);
+
+            db.DocGias.DeleteOnSubmit(xoa);
+
+            db.SubmitChanges();
+            Load_DocGia();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dbDataContext db = new dbDataContext();
+            var find = from dg in db.DocGias
+                       where dg.MaDocGia == txtmadocgia.Text
+                       select dg;
+            dsdocgia.DataSource = find;
+            Load_DocGia();  
+        }
+
+        private void dsdocgia_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtmadocgia.Text = dsdocgia.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txthoten.Text = dsdocgia.Rows[e.RowIndex].Cells[1].Value.ToString();
+            cbogioitinh.Text = dsdocgia.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
     }
 }
