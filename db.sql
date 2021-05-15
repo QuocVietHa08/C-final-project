@@ -34,3 +34,18 @@ create table DoiTuong(
 ('madg03','Hoang Van B','Nam','02/02/2002','madt03','04/09/2021','03/10/2021'),
 ('madg04','Le Thi C','Nu','03/03/2003','madt04','05/11/2021','05/12/2021'),
 ('madg05','Tran Van D','Nam','04/04/2004','madt01','05/12/2021','31/12/2021')
+
+
+
+create table TaiKhoan(
+	TaiKhoanId nvarchar(10) primary key,
+	TenTaiKhoan nvarchar(30),
+	MatKhauTaiKhoan nvarchar(30),
+)
+
+insert into TaiKhoan values
+('tk1','admin','12345'),
+('tk2','canbo','54321')
+
+select * from DoiTuong
+select * from DocGia

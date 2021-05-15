@@ -19,4 +19,11 @@
       <Association Name="DoiTuong_DocGia" Member="DocGias" ThisKey="MaDoiTuong" OtherKey="MaDoiTuong" Type="DocGia" />
     </Type>
   </Table>
+  <Table Name="dbo.TaiKhoan" Member="TaiKhoans">
+    <Type Name="TaiKhoan">
+      <Column Name="TaiKhoanId" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenTaiKhoan" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="MatKhauTaiKhoan" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

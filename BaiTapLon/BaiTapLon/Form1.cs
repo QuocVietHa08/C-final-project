@@ -102,6 +102,18 @@ namespace BaiTapLon
             txtmadocgia.Text = dsdocgia.Rows[e.RowIndex].Cells[0].Value.ToString();
             txthoten.Text = dsdocgia.Rows[e.RowIndex].Cells[1].Value.ToString();
             cbogioitinh.Text = dsdocgia.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtngaysinh.Text = dsdocgia.Rows[e.RowIndex].Cells[3].Value.ToString();
+            // ma doi tuong hien thi ds ten doi tuong
+
+            cbomadoituong.Text = dsdocgia.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtngaycap.Text = dsdocgia.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtngayhethan.Text = dsdocgia.Rows[e.RowIndex].Cells[6].Value.ToString();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            MDIParent1 ss = new MDIParent1();
+            ss.Show();
         }
     }
 }

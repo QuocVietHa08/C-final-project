@@ -8,3 +8,5 @@ C:\Ổ C\LT Windows\C-final-project\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.cspr
 C:\Ổ C\LT Windows\C-final-project\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.csproj.CoreCompileInputs.cache
 C:\Ổ C\LT Windows\C-final-project\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.exe
 C:\Ổ C\LT Windows\C-final-project\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.pdb
+C:\Ổ C\LT Windows\C-final-project\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.MDIParent1.resources
+C:\Ổ C\LT Windows\C-final-project\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.Login.resources

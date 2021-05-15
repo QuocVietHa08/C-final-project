@@ -36,6 +36,9 @@ namespace BaiTapLon
     partial void InsertDoiTuong(DoiTuong instance);
     partial void UpdateDoiTuong(DoiTuong instance);
     partial void DeleteDoiTuong(DoiTuong instance);
+    partial void InsertTaiKhoan(TaiKhoan instance);
+    partial void UpdateTaiKhoan(TaiKhoan instance);
+    partial void DeleteTaiKhoan(TaiKhoan instance);
     #endregion
 		
 		public dbDataContext() : 
@@ -81,6 +84,14 @@ namespace BaiTapLon
 			get
 			{
 				return this.GetTable<DoiTuong>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TaiKhoan> TaiKhoans
+		{
+			get
+			{
+				return this.GetTable<TaiKhoan>();
 			}
 		}
 	}
@@ -443,6 +454,116 @@ namespace BaiTapLon
 		{
 			this.SendPropertyChanging();
 			entity.DoiTuong = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TaiKhoan")]
+	public partial class TaiKhoan : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _TaiKhoanId;
+		
+		private string _TenTaiKhoan;
+		
+		private string _MatKhauTaiKhoan;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnTaiKhoanIdChanging(string value);
+    partial void OnTaiKhoanIdChanged();
+    partial void OnTenTaiKhoanChanging(string value);
+    partial void OnTenTaiKhoanChanged();
+    partial void OnMatKhauTaiKhoanChanging(string value);
+    partial void OnMatKhauTaiKhoanChanged();
+    #endregion
+		
+		public TaiKhoan()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TaiKhoanId", DbType="NVarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string TaiKhoanId
+		{
+			get
+			{
+				return this._TaiKhoanId;
+			}
+			set
+			{
+				if ((this._TaiKhoanId != value))
+				{
+					this.OnTaiKhoanIdChanging(value);
+					this.SendPropertyChanging();
+					this._TaiKhoanId = value;
+					this.SendPropertyChanged("TaiKhoanId");
+					this.OnTaiKhoanIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenTaiKhoan", DbType="NVarChar(30)")]
+		public string TenTaiKhoan
+		{
+			get
+			{
+				return this._TenTaiKhoan;
+			}
+			set
+			{
+				if ((this._TenTaiKhoan != value))
+				{
+					this.OnTenTaiKhoanChanging(value);
+					this.SendPropertyChanging();
+					this._TenTaiKhoan = value;
+					this.SendPropertyChanged("TenTaiKhoan");
+					this.OnTenTaiKhoanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MatKhauTaiKhoan", DbType="NVarChar(30)")]
+		public string MatKhauTaiKhoan
+		{
+			get
+			{
+				return this._MatKhauTaiKhoan;
+			}
+			set
+			{
+				if ((this._MatKhauTaiKhoan != value))
+				{
+					this.OnMatKhauTaiKhoanChanging(value);
+					this.SendPropertyChanging();
+					this._MatKhauTaiKhoan = value;
+					this.SendPropertyChanged("MatKhauTaiKhoan");
+					this.OnMatKhauTaiKhoanChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }

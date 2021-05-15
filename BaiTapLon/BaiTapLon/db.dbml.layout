@@ -14,12 +14,18 @@
         <elementListCompartment Id="ed2f7e62-87a1-4f99-927b-bc6c40c48b9d" absoluteBounds="4.015, 3.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5 : 3.125); (5 : 2.65549967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5 : 3.125); (5 : 2.65549967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dbDataContext/DoiTuong/DoiTuong_DocGia" />
       <nodes>
         <classShapeMoniker Id="edcc6d93-4316-4860-bfd8-ae79c1bede9f" />
         <classShapeMoniker Id="38f4a9a0-1bbb-41ff-95a2-38f86d52025a" />
       </nodes>
     </associationConnector>
+    <classShape Id="3f9a8a6a-ec70-456c-a35c-c58ed4de495d" absoluteBounds="6.625, 2, 2, 1.3862939453125">
+      <DataClassMoniker Name="/dbDataContext/TaiKhoan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="122ebbdd-2cb8-4d02-8542-fcf9eb47659f" absoluteBounds="6.64, 2.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>
