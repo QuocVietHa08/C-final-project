@@ -112,7 +112,7 @@ namespace BaiTapLon
 
         private void button8_Click(object sender, EventArgs e)
         {
-            MDIParent1 ss = new MDIParent1();
+            BaoCao ss = new BaoCao();
             ss.Show();
         }
     }
