@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace BaiTapLon
 {
     public partial class Form1 : Form
@@ -16,12 +16,16 @@ namespace BaiTapLon
         {
             InitializeComponent();
         }
+        SqlConnection conn = new SqlConnection(@"Data Source=EDWARD-HA\SQLEXPRESS;Initial Catalog=QuanLyDocGia_DoiTuong;Integrated Security=True");
         public void Load_DocGia()
         {
-            dbDataContext db = new dbDataContext();
-            var docgia = from p in db.DocGias
-                         select p;
-            dsdocgia.DataSource = docgia;
+            string select = "select * from DocGia";
+            SqlDataAdapter data = new SqlDataAdapter(select, conn);
+            DataTable table = new DataTable();
+            data.Fill(table);
+            dsdocgia.DataSource = table;
+
+           this.ActiveControl = txtmadocgia;
         }
         public void Load_ComboDoiTuong()
         {
@@ -35,8 +39,7 @@ namespace BaiTapLon
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Load_DocGia();
-            Load_ComboDoiTuong();
+                      Load_ComboDoiTuong();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -114,6 +117,28 @@ namespace BaiTapLon
         {
             BaoCao ss = new BaoCao();
             ss.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtmadocgia.Text = "";
+            txthoten.Text = "";
+            txtngaycap.Text = "";
+            txtngaysinh.Text = "";
+            txtngayhethan.Text = "";
+            cbogioitinh.Text = "";
+            cbomadoituong.Text = "";
+            this.ActiveControl = txtmadocgia;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Load_DocGia();
+        }
+
+        private void dsdocgia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
