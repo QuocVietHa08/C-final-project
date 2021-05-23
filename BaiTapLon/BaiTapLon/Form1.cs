@@ -66,38 +66,33 @@ namespace BaiTapLon
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dbDataContext db = new dbDataContext();
-            var update = db.DocGias.Single(dg => dg.MaDocGia == txtmadocgia.Text);
-            update.HoTen = txthoten.Text;
-            update.GioiTinh = cbogioitinh.Text;
-            update.NgaySinh = txtngaysinh.Text;
-            update.MaDoiTuong = cbomadoituong.SelectedValue.ToString();
-            update.NgayCap = txtngaycap.Text;
-            update.NgayHetHan = txtngayhethan.Text;
-
-            db.SubmitChanges();
+            conn.Open();
+            string update = "update DocGia set Hoten = '" + txthoten.Text + "',GioiTinh = '" + cbogioitinh.Text + "',NgaySinh='" + txtngaysinh.Text + "', MaDoiTuong='" + cbomadoituong.SelectedValue + "',NgayCap='" + txtngaycap.Text + "',NgayHetHan='" + txtngayhethan.Text + "' where MaDocGia='" + txtmadocgia.Text + "'";
+            SqlCommand lenh = new SqlCommand(update, conn);
+            lenh.ExecuteNonQuery();
             Load_DocGia();
+            conn.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            dbDataContext db = new dbDataContext();
-            var xoa = db.DocGias.Single(dg => dg.MaDocGia == txtmadocgia.Text);
-
-            db.DocGias.DeleteOnSubmit(xoa);
-
-            db.SubmitChanges();
+            conn.Open();
+            string delete = "delete from Docgia where MaDocGia = '" + txtmadocgia.Text + "'";
+            SqlCommand lenh = new SqlCommand(delete, conn);
+            lenh.ExecuteNonQuery();
             Load_DocGia();
+            conn.Close();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            dbDataContext db = new dbDataContext();
-            var find = from dg in db.DocGias
-                       where dg.MaDocGia == txtmadocgia.Text
-                       select dg;
-            dsdocgia.DataSource = find;
-            Load_DocGia();  
+            conn.Open();
+            string find = "select * from DocGia where MaDocGia = '" + txtmadocgia.Text + "'";
+            SqlDataAdapter data = new SqlDataAdapter(find,conn);
+            DataTable table = new DataTable();
+            data.Fill(table);
+            dsdocgia.DataSource = table;
+            conn.Close();
         }
 
         private void dsdocgia_CellClick(object sender, DataGridViewCellEventArgs e)
